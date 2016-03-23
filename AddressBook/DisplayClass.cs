@@ -12,10 +12,10 @@ namespace AddressBook
 {
     class DisplayClass
     {
-        public static string path = System.AppDomain.CurrentDomain.BaseDirectory; //set directory to folder app is in
+        private static string path = System.AppDomain.CurrentDomain.BaseDirectory; //set directory to folder app is in
 
-        public OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path + "db.accdb; Persist Security Info=false;");
-        public OleDbCommand command;
+        private OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path + "db.accdb; Persist Security Info=false;");
+        private OleDbCommand command;
 
         public string firstName { get; private set; }
         public string surname { get; private set; }
